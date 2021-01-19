@@ -22,5 +22,6 @@ def pwd_gen():
             break
 
     return password
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
