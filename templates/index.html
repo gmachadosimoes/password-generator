@@ -1,32 +1,23 @@
-<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
-    <title>Password Generator</title>
-  </head>
-  <body>
-  <main class="main">
-    <h1>Password generator</h1>
-    <p class="lead">Generate random secure passwords for safe logins.</p>
-    <p class="lead">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div>
+    <main class="center">
+      <h1>Password Generator</h1>
+      <p>Generate secure random passwords for safe logins.</p>
       <form method="get" action="submit" name="password">
-      </form>
-      <br>
-      <div>
-          {% if password %}
+        {% if password %}
             <p>Your new password is: {{ password }}</p>
-          {% endif %}
-      </div>
-      <div>
-        <p>Please note: to generate a new password, just refresh your page.</p>
-      </div>
-</main>
-  <footer>
-    <div class="card-footer">
-      <small class="text-muted">Built with Python by <a href="https://twitter.com/gmachadosimoes">Gabriel Simoes</a></small>
-    </div>
-  </footer>
-  </body>
+        {% endif %}
+      </form>
+
+    </main>
+  </div>
+  
+</body>
 </html>
