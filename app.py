@@ -4,9 +4,7 @@ import secrets
 
 
 app = Flask(__name__)
-###
-# Routing for your application.
-###
+
 
 @app.route('/')
 def index():
@@ -28,4 +26,4 @@ def pwd_gen():
     return password
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
