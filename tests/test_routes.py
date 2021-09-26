@@ -17,7 +17,7 @@ def test_http_response():
 @pytest.mark.app
 def test_error_handling():
     if response.status_code != 200:
-        assert Exception
+        return AssertionError("Bad request")
 
 
 
