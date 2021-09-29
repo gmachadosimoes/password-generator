@@ -31,4 +31,21 @@ def test_link_to_github():
     assert driver.current_url == github_url
     driver.quit()
 
+
+def test_form_prompt():
+    driver = webdriver.Chrome()
+    driver.get(url='https://pwdg.herokuapp.com/')
+    time.sleep(3)
+    driver.find_element(By.XPATH, "/html/body/div/main/form/p")
+    assert "Your new password is:"
+    driver.quit()
+
+
+def test_footer_elements():
+    driver = webdriver.Chrome()
+    driver.get(url='https://pwdg.herokuapp.com/')
+    time.sleep(3)
+    driver.find_element(By.XPATH, "/html/body/div/main/div[2]/footer")
+    assert "Built with Python by Gabriel Simoes (gmachadosimoes@gmail.com)"
+    driver.quit()
     
